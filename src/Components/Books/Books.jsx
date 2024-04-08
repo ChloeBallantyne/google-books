@@ -5,7 +5,12 @@ export const Books = ({ bookData }) => {
   return (
     <div>
       {bookData.map((data) => {
-        return <img src={data.volumeInfo.imageLinks.thumbnail} alt=""></img>;
+        return (
+          <div>
+            <img src={data.volumeInfo.imageLinks.thumbnail} alt=""></img>
+            <p>{data.volumeInfo.title}</p>
+          </div>
+        );
       })}
     </div>
   );
