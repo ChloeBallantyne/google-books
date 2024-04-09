@@ -1,4 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 .bar {
   border: 2px solid rebeccapurple;
   border-radius: 10px;
+  text-align: center;
+  background-color: rgba(115, 82, 148, 0.507);
+  color: rgb(0, 0, 0);
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.658);
+  }
+}
+
+.btn {
+  border: 2px solid rebeccapurple;
+  border-radius: 10px;
+  background-color: rgba(115, 82, 148, 0.507);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
 }

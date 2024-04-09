@@ -16,15 +16,17 @@ const SearchBar = ({ onSearch }) => {
     form.reset();
   };
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        className={styles.bar}
-        type="text"
-        placeholder="Search for books"
-        name="search"
-      />
-      <button>Search</button>
-    </form>
+    <div className={styles.wrapper}>
+      <form className={styles.form} onSubmit={onSubmit}>
+        <input
+          className={styles.bar}
+          type="text"
+          placeholder="Search for books"
+          name="search"
+        />
+        <button className={styles.btn}>Search</button>
+      </form>
+    </div>
   );
 };
 

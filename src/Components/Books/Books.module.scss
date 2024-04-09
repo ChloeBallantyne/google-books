@@ -1,0 +1,19 @@
+.book {
+  border: 1px solid rgb(114, 114, 114);
+  padding: 10px;
+  margin: 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.31);
+  max-width: min-content;
+  &_info {
+    background-color: whitesmoke;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
