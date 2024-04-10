@@ -9,6 +9,9 @@
   &_info {
     background-color: whitesmoke;
   }
+  &_img {
+    border: 1px solid white;
+  }
 }
 
 .wrapper {
@@ -16,4 +19,5 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 15px;
+  padding-top: 10px;
 }

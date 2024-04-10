@@ -1,0 +1,17 @@
+.modal {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  & h1 {
+    background-color: white;
+  }
+  & p {
+    background-color: white;
+  }
+}
