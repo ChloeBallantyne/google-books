@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { getBooksBySearchTerm } from "../services/book-services";
 import { Books } from "../Components/Books/Books";
+import { BookContext } from "../context/BookContextProvider";
 
 const BookLoader = ({ searchTerm }) => {
+  const { setBookObject } = useContext(BookContext);
+
   const [bookData, setBookData] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +17,9 @@ const BookLoader = ({ searchTerm }) => {
       setError(null);
 
       getBooksBySearchTerm(searchTerm)
-        .then((results) => setBookData(results))
+        .then((results) => {
+          setBookData(results);
+        })
         .catch((error) => setError(error))
         .finally(() => setIsLoading(false));
     }

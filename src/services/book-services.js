@@ -17,6 +17,7 @@ export const getBooksBySearchTerm = async (searchTerm) => {
 
 export const cleanUpBookData = (books) => {
   return books.map((book) => {
+    //console.log(book);
     const {
       id,
       volumeInfo: {

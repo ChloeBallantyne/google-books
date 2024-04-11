@@ -3,7 +3,8 @@ import Header from "./Components/Header/Header";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import BookLoader from "./Containers/BookLoader";
 import Modal from "./Components/Modal/Modal";
-import ModalContext from "./context/ModalContext";
+import { ModalContext } from "./context/ModalContext";
+import BookContextProvider from "./context/BookContextProvider";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState(null);
@@ -14,15 +15,17 @@ function App() {
 
   return (
     <>
-      <Header />
+      <BookContextProvider>
+        <ModalContext>
+          <Header />
 
-      <SearchBar onSearch={onSearch} />
+          <SearchBar onSearch={onSearch} />
 
-      <BookLoader searchTerm={searchTerm} />
+          <BookLoader searchTerm={searchTerm} />
 
-      <ModalContext>
-        <Modal />
-      </ModalContext>
+          <Modal />
+        </ModalContext>
+      </BookContextProvider>
     </>
   );
 }

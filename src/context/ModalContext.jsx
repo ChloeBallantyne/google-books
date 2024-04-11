@@ -1,8 +1,9 @@
-import React, { createContext } from "react";
+import { useState } from "react";
+import { createContext } from "react";
 
-export const ModalContext = createContext(null);
+export const ModalContextProvide = createContext(null);
 
-const ModalContext = ({ children }) => {
+export const ModalContext = ({ children }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModalOpen = () => {
@@ -12,10 +13,8 @@ const ModalContext = ({ children }) => {
   const providedValues = { modalOpen, toggleModalOpen };
 
   return (
-    <ModalContext.Provider value={providedValues}>
+    <ModalContextProvide.Provider value={providedValues}>
       {children}
-    </ModalContext.Provider>
+    </ModalContextProvide.Provider>
   );
 };
-
-export default ModalContext;
