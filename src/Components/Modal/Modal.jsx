@@ -8,16 +8,19 @@ const Modal = () => {
 
   const { modalOpen, toggleModalOpen } = useContext(ModalContextProvide);
   const classes = `${styles.modal} ${modalOpen ? styles.show : styles.hide}`;
-  console.log(bookObject);
 
   return (
     <>
       <div className={classes}>
-        <button onClick={toggleModalOpen}>Close</button>
-        <h2>{bookObject?.title}</h2>
-        <img src={bookObject?.image} alt={bookObject?.title}></img>
-        <p>Author/s: {bookObject?.authors}</p>
-        <p>Description: {bookObject?.description}</p>
+        <button onClick={toggleModalOpen} className={styles.button}>
+          Close
+        </button>
+        <div className={styles.wrapper}>
+          <h2>{bookObject?.title}</h2>
+          <img src={bookObject?.image} alt={bookObject?.title}></img>
+          <p>Author/s: {bookObject?.authors}</p>
+          <p>Description: {bookObject?.description}</p>
+        </div>
       </div>
     </>
   );
