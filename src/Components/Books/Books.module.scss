@@ -1,0 +1,30 @@
+.book {
+  border: 1px solid rgb(114, 114, 114);
+  padding: 10px;
+  margin: 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.31);
+  max-width: min-content;
+  &_info {
+    background-color: whitesmoke;
+  }
+  &_img {
+    border: 1px solid white;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+button {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
